@@ -1,0 +1,8 @@
+<!-- TODO five 1 submitEnd -->
+
+<%= render 'layouts/turbo_dialog' do %>
+  <div data-action="turbo:submit-end->dialog#submitEnd">
+    <h1>New facility</h1>
+    <%= render "form", facility: @facility %>
+  </div>
+<% end %>

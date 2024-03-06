@@ -1,0 +1,37 @@
+<!-- TODO four 2 -->
+<div id="<%= dom_id facility %>" class='fade-in-div'>
+  <p style="color: green"><%= notice %></p>
+
+  <div class='grid-x grid-padding-x'>
+    <div class='cell small-3'>
+      Name:<br>
+      <%= facility.name %>
+    </div>
+    <div class='cell small-6'>
+      Description:<br>
+      <%= facility.description %>
+    </div>
+    <div class='cell small-2'>
+      Capacity:<br>
+      <%= facility.capacity %>
+    </div>
+  </div>
+
+    <div class='grid-x grid-padding-x'>
+      <div class='cell small-4'>
+        <%= link_to "Show", facility, data: { action: "click->dialog#open", turbo_frame: :modal } %>
+      </div>
+      <div class='cell small-4 text-center'>
+        <%= link_to "Edit", edit_facility_path(facility), data: { action: "click->dialog#open", turbo_frame: :modal } %>
+      </div>
+      <div class='cell small-4 text-center' data-action="turbo:submit-end->dialog#submitEnd">
+        <%= button_to facility_path(facility), method: :delete, data: {turbo_confirm: "Are you sure you want to delete this?"} do %>
+          Delete
+        <% end %>
+      </div>
+    </div>
+<hr>
+
+</div>
+
+

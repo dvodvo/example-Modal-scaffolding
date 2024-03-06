@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* fade in for hotwire TODO six 3 */
+.fade-in-div {
+  animation: fadeIn 1s ease-in forwards, fadeOut 4s 1s ease-out forwards;
+  -webkit-animation: fadeIn 1s ease-in forwards, fadeOut 4s 1s ease-out forwards;
+  -moz-animation: fadeIn 1s ease-in forwards, fadeOut 4s 1s ease-out forwards;
+  -o-animation: fadeIn 1s ease-in forwards, fadeOut 4s 1s ease-out forwards;
+  -ms-animation: fadeIn 1s ease-in forwards, fadeOut 4s 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; background-color: rgba(252,231,2,1);}
+  25% { opacity: 0.25; background-color: rgba(252,231,2,0.75);}
+  50% { opacity: 0.5; background-color: rgba(252,231,2,0.5);}
+  75% { opacity: 0.75; background-color: rgba(252,231,2,0.25);}
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; background-color: rgba(252,231,2,1); }
+  25% { opacity: 0.25; background-color: rgba(252,231,2,0.75);}
+  50% { opacity: 0.5; background-color: rgba(252,231,2,0.5);}
+  75% { opacity: 0.75; background-color: rgba(252,231,2,0.25);}
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; background-color: rgba(252,231,2,1); }
+  25% { opacity: 0.25; background-color: rgba(252,231,2,0.75);}
+  50% { opacity: 0.5; background-color: rgba(252,231,2,0.5);}
+  75% { opacity: 0.75; background-color: rgba(252,231,2,0.25);}
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; background-color: rgba(252,231,2,1); }
+  25% { opacity: 0.25; background-color: rgba(252,231,2,0.75);}
+  50% { opacity: 0.5; background-color: rgba(252,231,2,0.5);}
+  75% { opacity: 0.75; background-color: rgba(252,231,2,0.25);}
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; background-color: rgba(252,231,2,1); }
+  25% { opacity: 0.25; background-color: rgba(252,231,2,0.75);}
+  50% { opacity: 0.5; background-color: rgba(252,231,2,0.5);}
+  75% { opacity: 0.75; background-color: rgba(252,231,2,0.25);}
+  100% { opacity: 1; }
+  
+.fade-out-div {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards, fade-out 4s 1s ease-out forwards;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1 background-color: rgba(252,231,2,1);
+  }
+  100% {
+    opacity: 0;
+  }
+}

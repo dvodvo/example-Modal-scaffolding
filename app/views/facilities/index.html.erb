@@ -1,0 +1,26 @@
+<!-- TODO four 1 -->
+<p style="color: green"><%= notice %></p>
+
+<div class='grid-x grid-padding-x'>
+  <div class='cell small-12 text-center'>
+    <h1>Facilities</h1>
+  </div>
+</div>
+
+<div class='grid-x grid-padding-x'>
+  <div class='cell small-11'>
+    <div id="facilities">
+      <% @facilities.each do |facility| %>
+        <div class='grid-x grid-padding-x'>
+          <div class='cell small-12'>
+            <%= render facility %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class='cell small-1'>
+    <%= link_to "New facility", new_facility_path, data: { action: "click->dialog#open", turbo_frame: :modal } %>
+  </div>
+</div>
+

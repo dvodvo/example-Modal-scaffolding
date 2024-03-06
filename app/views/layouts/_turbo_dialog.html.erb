@@ -1,0 +1,15 @@
+<!-- TODO three 3 -->
+<%= turbo_frame_tag :modal do %>
+  <dialog data-controller="dialog" data-action="click->dialog#clickOutside"
+          style="z-index: 10;  margin-top: 6rem;  border-radius: 0.375rem;  border-width: 4px;  width: 100%;  @media (min-width: 768px) {   width: 66.666667%;  }">
+    <div style="padding: 2rem; ">
+<!-- note the yield here -->
+      <%= yield %>
+    </div>
+    <div class='grid-x grid-padding-x'>
+      <div class='cell small-12 text-center'>
+        <button style="background-color: yellow" data-action="dialog#close">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+<% end %>

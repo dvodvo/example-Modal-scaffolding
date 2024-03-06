@@ -1,0 +1,10 @@
+<!-- TODO five 2 submitEnd -->
+
+<%= render 'layouts/turbo_dialog' do %>
+  <div data-action="turbo:submit-end->dialog#submitEnd">
+    <h1>Editing facility</h1>
+    <%= render "form", facility: @facility %>
+    <%= link_to "Show", @facility %>
+    <%# link_to "Show", facility, data: { action: "click->dialog#open", turbo_frame: :modal } %>
+  </div>
+<% end %>
